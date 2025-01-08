@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+html, body {
+    height: 100%
+}
+
+body {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #eee;
+    color: #111;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.header .btn-container {
+    display: inline-block;
+}
+
+.header .btn-container .btn {
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 18px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: top;
+    width: 18px;
+}
+
+#ca-container {
+    font-size: 0;
+    flex: 1 0 auto;
+    line-height: 0;
+}
