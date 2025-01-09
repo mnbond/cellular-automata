@@ -62,12 +62,16 @@ class CellularAutomata {
             }
         }
     }
-    
-    createCanvas() {
-        // Clear container
+
+    clearContainer() {
         while (this.container.firstChild) {
             this.container.firstChild.remove();
         }
+    }
+    
+    createCanvas() {
+        // Clear container
+        this.clearContainer();
         
         // Create new canvas
         const canvas = document.createElement("canvas");
@@ -130,6 +134,22 @@ class CellularAutomata {
         }
     }
     
+    resize() {
+        this.stop();
+
+        // Clear container
+        this.clearContainer();
+
+        // Set properties
+        this.cellsCountX = Math.floor(this.container.offsetWidth / this.cellSizePx);
+        this.cellsCountY = Math.floor(this.container.offsetHeight / this.cellSizePx);
+        this.createCanvas();
+
+        this.loadType(this.currentTypeIndex);
+        
+        this.start();
+    }
+
     setDefaultProperties() {
         // Set settings
         this.settings = {
