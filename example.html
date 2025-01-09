@@ -18,11 +18,17 @@
     </div>
     <div id="ca-container"></div>
     <script type="text/javascript">
+        let ca = null;
+
         document.addEventListener("DOMContentLoaded", () => {
             const cellSizePx = 6;
             const speedMs = 100;
-            const ca = new CellularAutomata("ca-container", cellSizePx, speedMs);
+            ca = new CellularAutomata("ca-container", cellSizePx, speedMs);
             ca.start();
+        });
+
+        window.addEventListener("resize", () => {
+            if (ca != null) ca.resize();
         });
     </script>
 </body>
