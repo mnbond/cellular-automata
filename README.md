@@ -2,6 +2,8 @@
 
 A JavaScript implementation of Conway's Game of Life and other types of [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton). View demo here: [codepen.io](https://codepen.io/mnbond/pen/MYgQbqX).
 
+![Screenshots](./screenshots/types.png)
+
 ## Instructions
 
 1. Add JavaScript code containing class `CellularAutomata` in an HTML document:
